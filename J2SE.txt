@@ -1,0 +1,873 @@
+_________________________________CORE JAVA NODES:_________________________________________
+
+in java there are 3 basic java programming elements are there
+   
+      1)class 2) interface 3)Enum
+---------------------------------------
+
+topic : SYNTAX:
+---------
+
+1)sysntax means some set of rules ,which we need to follow whenever writing the code,
+2)if we are not following the syntax rules in java we will be getting an ERROR.
+
+
+topic : ACCESS MODIFIERS:
+---------------------------
+
+1) ACCESS MODIFIERS provides access restrictions,in order to Enhance the data securty.
+
+ NOTE:- 
+     Enhance DATA SECURTY:- it's about controlling how data is accessed, modified, 
+                              and protected within the application.
+
+2) in java 4 types of access modifiers are there
+           i)public
+          ii)package-private(deafult)
+         iii)protected
+          iv)private
+ 
+  NOTE:
+           1)FOR A JAVA  class we can use only 2 access modifiers those are
+                     i)public
+                   ii)package-private(deafult)
+           2)A java class never be declare as private (or) protected
+
+---------------------------------------------------------------------------
+
+topic : 
+     sytax for class:
+                  
+                    <access modifiers> class <class name>
+                          {
+                              ---------;
+			      ---------;
+ 			      ---------; //statements
+ 			      ---------;
+                              ---------;
+                           }
+  
+ Interface:     we need to choose Interface,if we want to achive "abstraction".
+
+                      <access modifiers> interface < interface name>
+                          {
+                              ---------;
+			      ---------;
+ 			      ---------; //statements
+ 			      ---------;
+                              ---------;
+                           }
+  
+      Enum:     we neeed to choose Enum if there are "universal constants" present in
+                   our java programming languge.
+                         
+                    <access modifiers> enum <enum name>
+                          {
+                              ---------;
+			      ---------;
+ 			      ---------; //statements
+ 			      ---------;
+                              ---------;
+                           }
+                           
+----------------------------------------------------------------------------------------
+
+ topic: Retun type:-
+                     We are having  4 options for writing a return type for methods
+                          
+				1)void
+				2)all the 8 premitive data types
+				3)classes
+				4)interfaces
+-----------------------------------------------------------------------
+
+Q) what is a method?
+ 
+ A) it is a place where we can write the businees logic.
+
+Q) when java method will be  excuted?
+ 
+  A) Only whenever we are calling a method then that method excuted.
+
+Q)How  to call a java method?
+    
+ A) we need to call  a java method with the help of it's "Respictive class Object".
+
+Q)HOW TO CRREATE AN OBJECT?
+
+ A)  in Order to create an "Object" first we nee to write "new" keyword & intialize that object
+     with the help of "constructor".constructor name will be same as Class name
+   
+              syntax:- Class_name  refernce_variable = new   Class_name();
+               Ex   :-    ClassA         a           = new    ClassA();
+                     
+                      here ClassA()-----> means constructor
+__________________________________________________________
+
+If we want to see our java program we need to perform '2' tasks
+
+                   1)compilation.
+                    2)running.
+
+  --->compilation:
+                i)syntax for compilation--->[java compiler -->javac Filename.java]
+               ii)compilation means cheking the code syntax proper or not.
+              iii)After succesfull compilation java compiler is going to geneated ".class" file.
+               iv)geneated .class file name will be same as the class name.
+                v)The geneated .class file consits of Byte code instructions. which are understable by
+                     only by machines,humans can not undestand those instructions.
+
+  ---->running:
+                  i)Syntax: ----> [JVM: java  geneated.class file name]
+                  ii)JVM is responsible for running our java programming language.
+                 iii)Inorder to run java prg we need send geneated " .class " file as an input 
+                      into   the JVM.
+                   iv)JVM TO CHECK all byte code instructions of " .class file" are correct or wrong.
+                     v) if coorect we will be getting output otherwise cause the "Exceptions".
+_____________________________________________________________________________________________________
+
+    java class:
+                   1)predined class
+                   2)user defined class
+    java methods: 
+                 1)predined methods:
+                                 i)parameterized methods.
+                                ii)non-parameterized methods  
+
+                 2)user defined methods
+                              i)parameterized methods.
+                             ii)non-parameterized methods.
+__________________________________________________________________________________
+
+   topic:    what is the differnce between  c,c++ & java:
+
+
+    Featulres:                  c                    c++                   java  
+---------------------- |---------------------- |---------------------- |-----------------------    
+ 1)developed by------->|  dennis ritche        | Bjarne strousstrup    |     games gosling
+_________________________________________________________________________________________________
+ 
+ 2)Model      -------> |procedure oriented prg |  Object oriented prg |  Object oriented prg      
+                             (pop)			    (oop)         (oop)
+_________________________________________________________________________________________________
+3)platform
+   dependency------->  |   DEPENDENT           |   DEPENDENT           |  IDEPENDENT
+___________________________________________________________________________________________________                
+                       |                        |                       |
+4)preprocessor         |                        |                       |
+     directives------->|  __________            | __________            |            
+                       |   |#inclued|           | |#inclued|            | not supported instead   
+                       |   |#define |->supports | |#define |->supports  |   and its supports the 
+                       |   ---------            |  ----------           |   " import ".
+_______________________|________________________|_______________________|_______________________________
+
+5)Inheritance------->| NOT supported            | supported             | in mutiple inhertinace it
+                     |                          |                       | is not supported through the class
+                     |                          |                       |  but we can achive this concept
+		     |         			|			|   using interface.
+                     |                          |                       |
+__________________________________________________________________________________________________________
+6)pointrs-------->   |    supported             |    supported             |  this topic is eliminated
+                                                                                 & are replaced with refernce.      
+_____________________|__________________________|__________________________|___________________________
+
+_________________________________________________________________________________________________________________________
+
+                                --------- UNDER STANDING JVM--------
+
+Q)what  happends internally whenever we are compiling & running our java pragramme?
+
+A)whenever we are comppiling our java programme with the help of command " javac filename.java"
+    then the compiler cheking the syntax our java prg,if our java prg syntax is successfully completed
+      it's genereted the ".class file"  this  ".class file name" same as the class name. inoredr to run our
+      java prg with the help of "jvm" so whenver we are given to the .class file as an input the jvm it'cheking 
+       the byte code instructions proper or not. If in case it's have any error then "exception" is rasied
+       otherwise gives the output.
+
+                 java---->indepent.
+                  jvm--->dependent.
+________________________________________________________________________________________________________
+
+                             -------------- Internal Architecture of JVM--------
+                               
+                                    CLASS LOADER[LOADING,LINKING,INTIALIZING]
+                                       1) class area(method area)
+                                       2) Heap area 
+                                       3)stack area
+                                       4) pc(program counter)-register
+                                       5)NATIVE-method stack
+                                              |
+                                              --->*)Excution-engine
+                                                     |
+                                              	     |----------------------
+                                                     | 1)interpreter       |
+						     | 2)GARBAGE COLLECTOR.|
+                                                     |---------------------|
+                                                     |
+						     |-->NATIVE-method interface.
+						            |
+						            |--->java native libraries.
+
+1)class area (or)method area:it store the meta  data information
+              
+   i)Class Meta data   – Information about the loaded classes(e.g., class name, parent class, interfaces).
+  ii) Static Variables – Class-level variables shared among all objects.
+  iii) Method Code    – Bytecode of methods (both static and instance methods).
+   
+2)Heap area:--->1)Every java class object which we are creating will be stored in the heap area.
+          ---->  2)inside this memory there is one more  special  memory as SCP(string constant pool)
+              which is allocated only for storing  string class object.
+3)stack area:
+           ---> When a method runs, it may need to store variables, method parameters, return values,
+               and intermediate calculations.
+               The stack memory is used to hold this temporary data.
+               Once the method execution is finished, the stored data is removed from the stack.
+
+4)pc-register--->the PC(Program Counter) Register stores the address of the next instruction 
+                to be executed in a thread.
+
+5)NATIVE-method stack-->The Native Method Stack is stored  for executing native (non-Java) methods
+                          written in languages like C or C++.
+
+
+    **)Excution-engine   ;  
+         ------------- 
+            --->Excution-engine contains
+                 1) interpreter.
+                  2)Garbage collector.
+                     
+              1) interpreter: it is going to convert byte code instructions into machine  understable
+                                  language.
+              2)Garbage collector:
+                                   " Garbage collector " is a process of destroying all unused (OR) unrefernced
+                                     objects froM the heap area,this "GARBAGE COLLECTION" is done by
+                                     "GARBAGE COLLECTOR"
+                      
+__________________________________________________________________________________________________________
+                                ******** inerview imp qutions*******
+             what is JDK,JRE,JVM
+   JDK=JRE+DEVELOPMENT TOOLS
+   JRE=JVM+SET Of PREDEFINED LIBRARIES
+  JVM=CLASS AREA+HEAP AREA+STAC+PC-REGISTER+NATIVE METHOD-STACK
+                  
+________________________________________________________________________________________________________
+
+  CLASS: class is a blueprint of  creating an object.
+         
+         Synatx: <access modifier> class <class name>
+                         {
+                             -----;
+                             -----;
+                             -----;
+                          }           		 
+
+    Object:object is a realworld Entity.
+
+            syntax  :-   Class_name  refernce_variable = new   Class_name();
+               Ex   :-    ClassA         a             = new    ClassA();
+             
+_____________________________________________________________________________________________________
+           
+  topic: UNDER STANDING OBJECT CLASS:
+  -----------------------------------
+  
+  --> For every java class either predifined (or) user defined by defaultly "Object" class 
+     acts as parent class.
+
+  --> Object class is the first class in the java hierarchy.
+  -->In every java prg java.lang package by default imported
+  -->As "Object" class is present in java.lang package so need to import.
+  -->In "Object" class there are 11 methods. which we can access by using every other 
+       class objects.
+              
+              examples for those methods: hashCode(),equals(),finalize(),toString(),getClass,....etc.
+                  _________________________________  
+                 |note:see in nodes had 11 methods | 
+                  ---------------------------------
+
+  1)hashCode();
+-----------------
+       i)the retun type of hash code is Integer.
+      ii)this method doesnot provide adrees location of an oject.
+     iii)it is going to generate unique identification of an object.
+      iv)with which we can distigish '2' different objects.
+
+2)equals();
+------------------
+      i) the retun type of equals method is boolean (true/false)
+     ii) equals() is going to compare the adress location the object.
+    iii) if the both objects  are present in the same  location  then  "equals()" is
+           going to retun "true" otherwise "false".
+
+3)getClass();
+-------------------
+
+ -->it is a going to return Fully Quallified class name.
+ 
+4)toString();
+-------------------
+  -->it is used to convert an object to string fomat.
+
+5)finalize();
+------------------
+--->this method will be called by garbage collector internally.
+---->garbage collector is going to call finalize method only if an 
+          object is elgible for distraction.
+
+_______________________________________________________________________________________
+
+  variable: it provides identity to a memory locations.
+  
+    separators: they are 6 types [] , {} ; () .
+________________________________________________________________________________________________
+                          under standing java methods
+
+ --->the method declaration having 6 components
+----> 1)access modifiers: 2)returntype: 3)method name: 4)parameters list inside the parenthsis
+       5)an Exception  6)the method body elnclosed between curly braces{}.
+______________________________________________________________________________________________________________
+                             RETUNING A VALUE FROM METHOD
+
+Q)when the compiler will be comingback to the calling mehtod? 
+
+A)The compiler coming back to the calling method in 3 scenerious.
+
+   i)Ater excuting all the statements inside the method it will go the calling method.
+   ii)whenever the compiler come across return statement,immediatly it will be
+      coming back to it's calling method.
+   iii)if there is an "Exception".
+_______________________________________________________________________________
+  important keypoints:
+  -------------------
+    1)void method doesnot need return statement.
+    2)Except void methods for any other methods 100% we need use
+         return statements,otherwise we will be getting an error.
+    3)return type of the method & retuning a value of the method should be "compatable".
+    4)"retun" statement may not be the last statement inside a method,but it should be 
+       last excutable stament inside the method.
+
+    5)if we are using a method returntype is class then we need to retun "resptive class object".
+    6)whenever we are trying to print  an object of a class,internally compiler is going 
+       to call toString() which is  present inside object class.
+     7)with retunt type is void then Inside a method we can write return statement 
+         without retuning anything.
+____________________________________________________________________________________________
+                        UNDER STANDING "main()" method
+                       --------------------------------
+                     public static void main(String[] args) 
+		             {
+                                --------;
+                                --------;
+				--------;
+                              }
+         
+       Q) why we above method only write like this?
+     A)
+      1)public:
+      ---------
+       -->JVM Needs to Access It
+      ---> The main method is called by the Java Virtual Machine (JVM), which is outside the class.
+     ---->If main is not public, the JVM cannot access it, leading to an error.
+ 
+   2)static:
+    --------
+      -->static method can be called directly with the help of it's Respective "class name".
+     & no need to creat an object for the static methods.
+     ---->as main() is a static method because when ever we are running our java prg from the 
+            the command java generated ".class file name".
+     ---->so JVM IS GOING TO TAKE ".class file name" & respictive main() will be excuted.         
+        
+   3)void:
+   -------
+        --->every java prg starts with and also ending point is main() method.
+        --->if main method is haveing any other  retuntype except void our prg
+             will not be completed with main method.so main method returntype should be "void". 
+  4)main():
+  ---------
+            ---->just a  method name
+  5)String[] args:
+  ---------------
+              ---->java main method accept a "single" argument of type of String array.
+               --->this is also called "command line arguments".
+	
+====================================================================================================
+           
+                         VALID OR in VALID MAIN METHODS PROGRAMS
+                         --------------------------------------
+public class Mainmethod {
+
+	/*
+	 * public static void main(String[] args) {
+	 * System.out.println("main method valid"); //valid
+	 * 
+	 * }
+	 */
+
+	/*
+	 * public static void main(String []args) {
+	 * System.out.println("main method valid"); //valid }
+	 */
+
+	/*
+	 * public static void main(String [] args) {
+	 * System.out.println("main method valid");//valid }
+	 */
+
+	/*
+	 * public static void main([] String args ) {
+	 * 
+	 * //in valid }
+	 */
+
+	/*
+	 * public static void main( String [] kishan ) { //valid
+	 * 
+	 * System.out.println("String array name is kishan "); }
+	 */
+
+	/*
+	 * public static void main( String [] args ) { //valid }
+	 */
+
+	/*
+	 * public static int main(String [] args ) {
+	 * 
+	 * //in valid because main method we did not retun need anything }
+	 */
+
+	/*
+	 * public final static void main( String [] args ) {
+	 * System.out.println("valid");
+	 * 
+	 * valid, but An error occurs when you declare the main method as final in a
+	 * parent class and try to redefine it in a subclass.
+	 * 
+	 * }
+	 */
+
+	/*
+	 * final public static void main(String args[] ) { System.out.println("valid");
+	 * valid, but An error occurs when you declare the main method as final in a
+	 * parent class and try to redefine it in a subclass.
+	 * 
+	 * }
+	 */
+
+	/*
+	 * final public static void main(String [] args ) { System.out.println("valid");
+	 * valid, but An error occurs when you declare the main method as final in a
+	 * parent class and try to redefine it in a subclass.
+	 * 
+	 * }
+	 */
+
+	/*
+	 * public static void main(String ... args) { System.out.println("valid");}
+	 * 
+	 * topic : Understanding main(String ... args)
+	 * ------> The three dots (...) in String
+	 * ... args represent varargs(variable-length arguments), which allow passing
+	 * any number of String arguments to the method.
+	 * 
+	 * Q) How Does String ... args Work? -->String ... args means that args can
+	 * accept zero or more String values. ---> Internally, Java treats String ...
+	 * args as an array (String[] args).
+	 * 
+	 */
+
+	/*
+	 * public static void main(String[8] args) {
+	 * System.out.println("compile time error"); }
+	 * 
+	 * the given main method will cause a compilation error because array
+	 * declarations in Java do not allow specifying the size inside the brackets
+	 * ([]).
+	 */
+	
+	/*
+	 * public static void main(int[] args) {
+	 * System.out.println("valid but our prg searching main method"); }
+	 */
+	
+	/*
+	 * public static void main() {
+	 * 
+	 * System.out.println("valid but our prg searching main method"); }
+	 */	
+	
+	public static void Main(String[] args) {
+		System.out.println("vallid but our prg searching main method");
+	}
+}
+ ----------------------------------------------------------------------------------------------------------------        
+         28-03-2025  
+         -----------
+                                          UNDER STANDING OF VARIABLES:
+                                    __________________________________________
+            
+      -->variables are nothing but reservsed memory location to store the values.
+       -->in java we are having 3types of variables:
+             1)instance variables:
+             2) static variables:
+             3)local variables:
+      
+            i)instance variables:
+               ------------------
+                              i)these variables which are declare inside the class and outside the method
+                                  (or) a block (OR) a constructor are known as instance variables.
+                               ii)we can access instance variables in '2' ways
+                                       1)using identifier name.
+                                       2)using class object.
+                               iii)for instance variables JVM automatically intialize them with their defualt
+                                      values of the data types.
+                               iv)if instance & local variables have same name then first priority
+                                   given to JVM is LOCAL VARIABLES.
+                               v)FOR every instance[object]a separeated copy of instance variables will 
+                                   be created.
+                                  [ means for a class, how many objects are created those many those many
+                                    instance variable created]
+            ii)static varaiable:
+              ------------------
+                            i)these variables which are declare inside the class and outside the method
+                                  (or) a block (OR) a constructor with the help of "static" keyword 
+                                   are known as instance variables.
+                            ii)static variables will be intilized of class loading by the class loader.
+                            iii)for static variables automatically intilize them with their defualt values 
+                                of data types.
+			    iv)if static & local variables have same name then first priority
+                                   given to JVM is LOCAL VARIABLES.
+                             v)A static variable never be a local variable.
+                            vi)there will be a only one copy of the static variable throught the program.
+                            vii)these variables we can access the 3 types
+                                     1)using identifier name.
+                                       2)using class object.
+                                        3)static variable.
+           iii)local variable:
+             ----------------
+                       i)these variables which are declare inside a method (or) method body .
+                      ii)we can accese local  variables only with the help of using identifier name.
+                      iii)the scope of local varible is with in the body.[means  we can  use thish variable
+                           inside the same method we canot access outside the method]
+                      iv)for local variables jvm will not assign  a deafult values ,
+                         it is responsable for peogrammers.
+                       v)if we deaclare a  local variable then our prg is excuted.If in case we are using 
+                          those varibles without intilize we will be getting an compile time error. 
+_______________________________________________________________________________________________________________
+         Diffrence between static & instance variables:
+          ---------------------------------------------
+ 
+     STATIC VARIABLE                          |         INSTANCE VARIABLE
+______________________________________ __________________________________________________________________________________
+ i)these variables which are declare inside  | i)these variables which are declare inside
+the class and outside the method (or)       |     the class and outside the method
+ a block (OR) a constructor with the       |  (or) a block (OR) a constructor are known as instance variables.
+ help of "static" keyword
+_____________________________________________________________________________________________________                                                  
+ ii)it will store jvm inside class-- area  |   ii)it will store jvm inside HEAP--area                                                  
+______________________________________________________________________________________                                                      
+ iii) these variables we can access        |  iii)we can access instance variables in '2' ways
+      the 3 types                          |          1)using identifier name.  
+            1)using identifier name.       |           2)using class object.
+             2)using class object.         |
+              3)static variable.           |                 
+ __________________________________________________________________________________________
+         
+     TUES DAY:01-04-2025:
+    ----------------------
+                                  CONSTRUCTOR
+                                 -------------
+
+     USES:
+    ------
+        1)CONSTRUCTOR is used to intilize a class object.
+        2)constructor is used to provide values for the instance variables.
+    
+     rules:
+    --------
+      1)constructor name as same as class name.
+      2)constructor is used to provide values for the instance variables.
+
+   syntax for constructor:
+  -----------------------
+   <access modifier><class name>()
+         {
+            -----------; 
+            -----------;
+            -----------;
+            -----------;
+         }
+________________________________________________________________________________________________
+    
+    TYPES:
+                                      CONSTRUCTOR
+                                    _______|_______
+                                   |              |  
+                          para meterised       non-para meterised
+                             CONSTRUCTOR             CONSTRUCTOR
+  
+  
+Q)How to call a CONSTRUCTOR (or) when CONSTRUCTOR will be excuted?
+ 
+    CONSTRUCTOR will be called simultanously,whenever we are creating an object.
+
+
+Key points:-
+----------------- 
+⚫ Constructor can have all ‘4’ access modifiers (public, protected, private, default). 
+⚫ If there is no constructor in a class, compiler automatically creates a default constructor. 
+⚫ The access modifier for the default constructor provided by the compiler will be
+    SAME as the access modifier as class. 
+  (If the class is public then constructor is also public OR If the class is default
+     then constructor is also default). 
+⚫ The default constructor given by the compiler will have only ‘2’ access modifiers ie., public & default. 
+⚫ Compiler will provide a default constructor when there are no constructors in the class.
+⚫ We can code/write default constructor (or) parameterized constructor basing upon our programming
+      requirements. 
+⚫ If we declare a constructor as ‘private’ then we can restrict the object creation of our class
+     in other classes. 
+⚫ A Constructor is called simultaneously at the time of object creation by using ‘new’ keyword. 
+⚫ In constructor we can write a ‘return’ statement without returning any value (Just like void method). 
+⚫ We can create a class object by using “new” keyword and “available constructor” . 
+⚫ CONSTRUCTOR OVERLOADING IS POSSIBLE OVERRIDDING IS NOT POSSIBLE.
+
+--------------------------------------------------------------------------------------------------
+                              
+                                  Constructor Vs Method
+__________________________________________________________________________________________________________      
+Constructor is used to initialize the state   |Method is used to expose  
+ of an object.                                |   behaviour of an object.
+______________________________________________|______________________________________________________________
+  Constructor must not have return  type.     |    Method must have return type.
+______________________________________________|______________________________________________________________
+Constructor is invoked implicitly.            | Constructor is invoked implicitly. 
+______________________________________________|_____________________________________________________________
+The java compiler provides a  default         |Method is not provided by  compiler in any case.
+constructor, 				      |	
+if you don't  have any constructor.           |
+______________________________________________|_______________________________________________________________
+Constructor name must be same as the class    |Method name may or may not be  same as class name.
+ name.					      |
+______________________________________________|__________________________________________________________
+
+ 
+--------------------------------------------------------------------------------------------------------------
+                                         
+                            operators:
+                          -------------
+
+ in java they are mainley 4 types:
+
+   1)relational operators(==,>=,<=,<,>,!=)
+   2)increment(++),decrement(--) operators
+        i)pre-->ex:++a  (or) --a
+        ii)post-->ex:a++  (or) a--
+
+   3)logical operators: && ,||, !(true) or !(false)
+   4)airthemetic operations:+,-,*,/,%
+
+   _________________________________________________________________________________________
+                                UNDER STANDing the STATIC keywords
+                                ----------------------------------
+                            
+                                         STATIC
+                              _____________|______________
+                             |             |              |
+                          variable       METHOD          BLOCK
+    
+        1)variable:
+        -------------
+          1)variable which is declare inside the class and out side the method or a constructor
+                with the help of static keyword is known as static vriable.
+          2)for static variables JVM  will autometically intialize them with thier default values
+
+          3)For finala static variables JVM will not intialize them with thier default values.
+          4)there will be only one copy of static variable throught out the program.
+           5) static variables are not constantwe can change value of static variable.
+          (once we have changed static variable value the updated value reflected to the entire program.)
+     
+        6)static varibles will be intilized at the time of class loading.
+
+     2)static method:
+    -----------------------
+     1)a method wich declare "static" keyword is known as static method.
+      2)we can acess static method in 3 ways:
+                  i)using identfier name(but the two methods are static methods)
+                 ii)using class object.
+                 iii)using CLASS NAME.
+  3)WE CAN ACCESS A NON STATIC VARIABLES INSIDE STATIC METHOD, BUT with the help of its respctive class object.
+
+
+3)static block:
+--------------------
+  1)in our java program if we are having a main() and a static block first priority will be given to the static block.
+ 2)we can write any number of static blocks in our program.
+  3)we canot call static blocks they  will be getting excuted in defined order[i.e  top to bottom]
+ 4)before java 1.5 vertion we can run a java prg only with the help of static block, but after that it is write main() in our programto run the java application.
+ 5)final static variables we are supposed to intialize them at the time of declaration or inside static blocks anywhere else if you a trying to intialize
+      we will be getting an compile time error.
+__________________________________________________________________________________________________________________________
+                                                                                     TYPECASTING
+                                                                                   -----------------------
+
+                         TYPECASTING: IT IS CONVERING ONE DATA TYPE TO ANOTHER DATATYPE
+                                                          
+                                                                                TYPECASTING
+                                                        		        ___|_____
+				        |                 |
+ 				(widening)       NARROWING
+                                                                              implisty              expicity
+
+
+
+                            IMPLICTY TYPECASTING:  converting smaller datatype to largerdata type.
+
+                                                                          1)it is automaticallcy done by the java compiler. 
+				2)there is NO chance of  LOSS of information
+
+                              EXPLICITY TYPECASTING: converting largerdata type TO smaller datatype
+                                                                              
+
+                                                                          1)it will not automaticallcy done by the java compiler,it is responsible for the programer.
+
+				2)there may be a chance of  LOSS of information . 
+                                                                                
+                                                                    examle:
+                                                                                      int a =500; 
+                                                                                     byte b=(byte)a;--->gives -12  because byte range is -128 to 127 but we put here byte value 500
+                                                                                              so internally it foolow the operation i.e
+                                                                                                              minimum range +(value-maximum range-1)  so
+                                            					-128+(500-127-1) ---->  -128+(500-128)--->  -128+372-->  244
+							    244  is also out of the  byte range so use once again
+    							          minimum range +(value-maximum range-1)  then gives -12.
+_________________________________________________________________________________________________________________________________________________
+                                                                                                      WRAPEER CLASSES
+                                                                                                      -----------------------------
+ ------>   it is converting datatype into it's respetive class Object. 
+
+                             primitive data types              =====>   wrapper classes
+                            -----------------------	              -------------------
+                    	int	                =====>        Integer
+		float	                =====>        Float
+          		byte	                =====>        Byte
+	                 short                             =====>       Short
+	                double                           =====>       Double                             
+	                 long                              =====>       Long                              
+	                 char                              =====>       Char                              
+	                 boolean                        =====>       Boolean                        
+ 
+ ---->this wrapper classes present in "java.lang "   package
+   
+		AUTO  BOXING  ---- >CONVERTING---->	primitive data types==>   wrapper classes
+	              AUTO UNBOXING  ---- >CONVERTING---->wrapper classes         ==> primitive data types
+
+
+                           exmple for AUTO  BOXING  :
+	-------------------------------------------
+ 				 byte b=10; 
+				Byte b1=Byte.valueof(b)
+				Byte b2=b1;
+
+
+                     exmple for AUTO UNBOXING  :
+	-------------------------------------------
+ 		Byte b1=new Byte( (byte)10); // here internaly 10  tacken java compiler is integer thats why we are using 
+                                                                                             typecasting and converting byte so ican wrtie ----->(byte)10
+                                    byte b2=b1.byteValue();
+
+
+                             CONVERTING STRING VALUES TO PRIMITIVE DATATYPES VALUES
+                              -------------------------------------------------------------------------------------------
+
+                                              String s="  prmitive data type values like 10 (or) 12.05 (or) true " ;
+
+                                              int i=Integer.parseInt(s)
+                                             byte b=Byte.paseByte(s)
+		    short sa=Short.parseShort(s);
+                                           long l=Long.parseLong(s);
+                                                    
+                                                     (like all datatypes except charcter data type)
+
+                                        String s="charcter value  ";
+                                         char c=s.charAt(0);
+                                                                                   ex: String s="g"
+        				   char c=s.charAt(0);
+                                
+                                                
+
+                                     
+
+ __________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+                                   
+
+
+
+
+
+                      
+
+                                        
+  
+
+                                                                 
+                                                                                                                                                 
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ 
+                                                   
+                              
+                                
+                                      
+                   
+                    
