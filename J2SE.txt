@@ -797,9 +797,62 @@ ________________________________________________________________________________
                                      
 
  __________________________________________________________________________________________________________________________
+                             ---------->  in java provides 3 types of control statements
+                             
+                               1) selection statements   2)iterative statements  3)jumping statements
+                                               
+                       1) selection statements:
+	             --------------------------------
+
+		  In java  selection statements are  
+                                                                 (i)if     (ii)if-else   (iii)if-else-if  (iv)switch
+                                                                 
+                                                     Sysnatx:   if(condition){   }
+                
+                                                 Sysnatx: (ii)if-else --->     if(condition)
+                                                                                              {              } 
+				             else
+                   					{            }
+                                              Sysnatx:   (iii)if-else-if-----> if(condition)
+                                                                                              {              } 
+				             else if(condition)
+                   					{            }
+				              else {         }
+	
+
+                                             Sysnatx:   switch (expression) {
+                                                                                case value1:
+                                                                                             // code block
+        							                                break;
+  					                                         case value2:
+      						                                               // code block
+							                                          break;
+				                                                // more cases...
+  				
+				                                                default:
+   						                                          // default code block
+					                                       }
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+		2)iterative statements  :  
+		---------------------------
+     
+                                                      1)while   2)do-while  3)for-loop  4)for-each loop(1.5 v)
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------								
+	3)jumping statements:
+       --------------------------
+                               i) break  2)continue   3)return
+
+
+
+                
 
 
 
