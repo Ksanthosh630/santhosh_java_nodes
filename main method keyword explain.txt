@@ -1,0 +1,38 @@
+ UNDER STANDING "main()" method
+                       --------------------------------
+                     public static void main(String[] args) 
+		             {
+                                --------;
+                                --------;
+				--------;
+                              }
+         
+       Q) why we above method only write like this?
+     A)
+      1)public:
+      ---------
+       -->JVM Needs to Access It
+      ---> The main method is called by the Java Virtual Machine (JVM), which is outside the class.
+     ---->If main is not public, the JVM cannot access it, leading to an error.
+ 
+   2)static:
+    --------
+      -->static method can be called directly with the help of it's Respective "class name".
+     & no need to creat an object for the static methods.
+     ---->as main() is a static method because when ever we are running our java prg from the 
+            the command java generated ".class file name".
+     ---->so JVM IS GOING TO TAKE ".class file name" & respictive main() will be excuted.         
+        
+   3)void:
+   -------
+        --->every java prg starts with and also ending point is main() method.
+        --->if main method is haveing any other  retuntype except void our prg
+             will not be completed with main method.so main method returntype should be "void". 
+  4)main():
+  ---------
+            ---->just a  method name
+  5)String[] args:
+  ---------------
+              ---->java main method accept a "single" argument of type of String array.
+               --->this is also called "command line arguments".
+	
