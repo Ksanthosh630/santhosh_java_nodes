@@ -801,6 +801,7 @@ ________________________________________________________________________________
                         ---------->  in java provides 3 types of control statements
                              
                                1) selection statements   2)iterative statements  3)jumping statements
+---------------------------------------------------------------------------------------------------------------
                                                
                        1) selection statements:
 	--------------------------------
@@ -835,6 +836,23 @@ ________________________________________________________________________________
 					}
 				NOTE : FOR MORE INFOMATION GOTO SWITCH
 
+Understanding Switch Statement 
+⚫ Unlike ‘if’ and ‘if-else’ statements, the switch statement can have a number of possible execution paths. 
+⚫ Switch accepts byte, short, char, and int (1.4v) primitive data types, After jdk 1.5v it started accepting its corresponding ‘wrapper classes’ also. 
+⚫ From jdk 1.7v switch started accepting ‘String’ also.
+ ⚫ Switch case should be present in side a loop. 
+⚫ All the ‘cases’ and ‘default’ are optional in switch statement. 
+⚫ Independent statements are not allowed inside switch.
+Contd… 
+⚫ Every case label should be “compile time constant”.
+ ⚫ We can use expressions in the switch statements and in case labels also. 
+⚫ Case labels range should be with in the range of the data type. 
+⚫ Switch will not allow duplicate case labels. 
+⚫ In the switch statement if any case got triggered then from that case onwards all statements will be executed until end of the switch (or) break 
+⚫ We can write default case only once. 
+⚫ The default statement is optional and can appear anywhere inside the switch block.
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -842,10 +860,49 @@ ________________________________________________________________________________
 		2)iterative statements  :  
 		---------------------------
      
-                                                      1)while   2)do-while  3)for-loop  4)for-each loop(1.5 v)
+                                     1)while   2)do-while  3)for-loop  4)for-each loop(1.5 v)
+
+⚫ Java iteration statements enable repeated execution of part  of a program until a certain termination condition is  satisfied. 
+⚫ Java provides four iteration statements: 
+1) while 
+2) do-while 
+3) for 
+4) for each loop 
+
+Understanding while loop 
+⚫ while loop first checks the condition then enters in to the  loop  
+⚫ Just like ‘if’ statement, the argument should return  boolean value ie., true or false. 
+⚫ If we don’t write braces after while, we can write only one  statement which is dependent on ‘while’.
+⚫ We should not declare any statement in that sentence.
 
 
+ Understanding do-while loop
+⚫ do-while first enter the loop and then check the condition. 
+⚫ In do-while after the while condition we should write  semicolon Ex: while (i==0); 
 
+
+Understanding for loop 
+
+⚫ For loop consists of '3' statements ( Initilization, Test Condition, Increment / Decrement operator) 
+⚫ In initialization section we can take any valid java statement. 
+⚫ Initialization will be executed only once in a loop. 
+⚫ In condition statement we can take any java expression which returns 'boolean' as result. 
+⚫ If we are not taking any expression compiler will give 'true' as default value. ⚫ All 3 statements are optional in for loop. 
+⚫ If we our condition is always true then the code written out side the loop will be "Un reachable code" (Compile time error). 
+⚫ If we our condition is always false then the code written in side the loop will be "Un reachable code" (Compile time error).
+
+
+Understanding for-each loop 
+
+⚫ For each Introduced in 1.5version, It acts as an alternative to  for loop, while loop etc for retrieving the elements in the array. 
+⚫ By using for-each loop we can easily retrieve the elements  easily from the arrays. 
+⚫ It cannot traverse the elements in reverse order because it does  not work on index values 
+⚫ For-each also acts as alternative for iterator when retrieving  elements from collections. 
+Syntax: 
+⚫ Step 1 :-Declare a variable that is the same type as the base type of  the array 
+⚫ Step 2 :-Write the Colon (:) 
+⚫ Step 3 :-Then write the array name 
+⚫ Step 4 :-In the loop body we have to use the variable which we  have created
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 								
@@ -853,37 +910,37 @@ ________________________________________________________________________________
                     --------------------------
                                i) break  2)continue   3)return
 
+⚫ Java jump statements enable transfer of control to other  parts of program. 
+⚫ Java provides three jump statements: 
+1) break  2) continue  3) return 
+⚫ In addition, Java supports exception handling that can also  alter the control flow of a program.  
+Understanding break statement 
+⚫ The break statement is used to jump out of a loop. ⚫ When the break statement is encountered inside a  loop, the loop is immediately terminated and the  
+program control resumes at the next statement following the loop. 
+⚫ We can use break statement inside "switch", "loops" &  "labeled blocks"., other than this if you are using any  where you will be getting an compile time error.
+
+Understanding continue statement 
+⚫ Continue statement is used to skip current iteration and  continue for the next iteration in the loop. 
+⚫ We can us continue statement inside "loops" & "labeled  blocks"., other than this if you are using any where you will be  getting an compile time error.
+
+_____________________________________________________________________________________________________________________
 
 
 
+Understanding Scanner Class 
+----------------------------------
+⚫ In java using different classes we can collect input from the  users. 
+⚫ Scanner class is available in ‘util’ package. 
+⚫ We can read input from the console using scanner class ⚫ It has been introduced in java 1.5 version. 
+⚫ Scanner class is capable of reading information from different  sources. 
+Steps: 
+1. import java.util.Scanner 
+2. create object of Scanner class 
+3. use pre-defined methods in the Scanner class to take input --->nextInt(); --->next();
 
+Scanner Class Methods
 
-
-
-
-
-
-
-                                                                   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
+nextInt(),nextDouble(),nextFloat(),nexLine() like that all primtive dataypes have predifined methods except character datatype
 
 
 
